@@ -28,6 +28,16 @@ namespace OEmbedSharp.Tests
         }
 
         [TestMethod]
+        public void EmbedForYouTube()
+        {
+            var oembed = new OEmbed();
+
+            var actual = oembed.Embed("http://www.youtube.com/watch?v=GYZRWdne5Uo");
+
+            Assert.IsNotNull(actual);
+        }
+
+        [TestMethod]
         public void CanEmbedForFlickr()
         {
             var oembed = new OEmbed();
